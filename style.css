@@ -1,0 +1,143 @@
+/* Réglage général*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+body
+{
+    max-width: 410px;
+    margin:auto;
+}
+/* Mes mode flexbox */
+.flexCentre
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexBetween
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flexAround
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexColumnCentre
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flexColumnBetween
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.flexColumnAroud
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.decorationNone
+{
+    text-decoration: none;
+    color:black;
+}
+.texetColorBouton
+{
+    color: white;
+}
+/* Fin des réglages */
+nav
+{
+    font-family: 'Shrikhand', cursive;
+    height: 90px;
+    margin-top: -20px;
+    position: relative;
+    font-size: larger;
+    text-align: center; /* Pour mettre le texte au centre horizontalement */
+    box-shadow: 0 0 5px 3px grey;/* Ombre vers le bas */
+    padding: 0.1px;
+}
+main
+{
+    font-family: 'Roboto', sans-serif;
+}
+.paddingMap
+{
+    padding-right: 10px;
+}
+.backGroundMap
+{
+    background-color: #eaeaea;
+}
+.textAlign
+{
+    text-align: center;
+    margin: 0;
+}
+.blokRez
+{
+    height: 250px;
+    padding-top:40px;
+    background-color: #f6f6f6;
+}
+.textAlignSousTitre
+{
+    text-align: center;
+    font-weight:lighter;
+}
+.margin-topSousTitre
+{
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+.restoBouton
+{
+    width: 60%;
+    height: 50px;
+    border-radius: 50px;
+    margin-left: 20%;
+    background: linear-gradient(#ff79da, #9356dc);/* Permet d'émettre deux couleurs en dégradé */
+    box-shadow: grey 0 3px 5px;
+}
+/* Fonctionnement */
+.margeTitre
+{
+    padding-left: 10px;
+}
+.caseFonctionnement
+{
+    width: 80%;
+    height: 70px;
+    margin-left: 40px;
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    box-shadow: grey 0 3px 5px;
+}
+.rondViolet
+{ 
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #9356dc;
+    margin-left: 30px;
+    margin-top: -45px;
+}
+.textSize
+{
+    font-size:small;
+}
+.colorGris
+{
+    color: grey;
+}
+.margeIcone
+{
+    margin-left: 70px;
+}
