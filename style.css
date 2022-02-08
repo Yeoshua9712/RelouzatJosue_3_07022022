@@ -105,6 +105,13 @@ main
     margin-left: 20%;
     background: linear-gradient(#ff79da, #9356dc);/* Permet d'émettre deux couleurs en dégradé */
     box-shadow: grey 0 3px 5px;
+    transition: transform 150ms;
+}
+.restoBouton:hover
+{
+    transform: scale(1.05);
+    opacity: 0.9;
+    cursor: pointer;
 }
 /* Fonctionnement */
 .margeTitre
@@ -140,4 +147,20 @@ main
 .margeIcone
 {
     margin-left: 70px;
+}
+.flexColumnTuto
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px;
+}
+.flexColumnTuto > li
+{
+    height: 70px;
+    width: 300px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #f6f6f6;
+    box-shadow: gray 0 3px 5px;
 }
