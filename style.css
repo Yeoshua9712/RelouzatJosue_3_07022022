@@ -4,6 +4,7 @@ body
 {
     max-width: 410px;
     margin:auto;
+    font-family: 'Roboto', sans-serif;;
 }
 /* Mes mode flexbox */
 .flexCentre
@@ -103,7 +104,7 @@ main
     height: 50px;
     border-radius: 50px;
     margin-left: 20%;
-    background: linear-gradient(#ff79da, #9356dc);/* Permet d'émettre deux couleurs en dégradé */
+    background: linear-gradient(170deg, #ff79da, #9356dc);/* Permet d'émettre deux couleurs en dégradé */
     box-shadow: grey 0 3px 5px;
     transition: transform 150ms;
 }
@@ -144,23 +145,136 @@ main
 {
     color: grey;
 }
+.colorPurple
+{
+    color:#9356dc;
+}
 .margeIcone
 {
     margin-left: 70px;
 }
 .flexColumnTuto
 {
+    counter-reset: étapes;
     display:flex;
     flex-direction: column;
     align-items: center;
     margin-right: 40px;
+    
 }
 .flexColumnTuto > li
 {
-    height: 70px;
-    width: 300px;
+    padding: 30px;
+    width: 240px;
     margin: 10px;
     border-radius: 20px;
+    text-align: center;
     background-color: #f6f6f6;
     box-shadow: gray 0 3px 5px;
+    transition: transform 150ms;
+}
+.flexColumnTuto > li:hover
+{
+    transform: scale(1.05);
+    opacity: 0.9;
+    cursor: pointer;
+}
+.flexColumnTuto li::before
+{
+    content: counter(étapes);
+    counter-increment: étapes;
+    color: white;
+    background-color: #9356dc;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    left: -60px;
+    display: inline flow-root list-item;
+    position: relative;
+}
+ol
+{
+    list-style-type: none;
+}
+.margeCentre
+{
+    margin: 30px;
+}
+.iconSpace
+{
+    position: relative;
+    left: -30px;
+}
+/* Restaurants */
+.blokResto
+{
+    width: 100%;
+    height: 800px;
+    background-color: #f6f6f6;
+    margin-top: 60px;
+    padding-top:30px;
+}
+.carteResto
+{
+    background-color: white;
+    height: 260px;
+    width: 340px;
+    margin-left: 8px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: grey 0 3px 5px;
+    transition: transform 150ms;
+}
+.carteResto:hover
+{
+    transform: scale(1.05);
+    opacity: 0.9;
+    cursor: pointer;
+}
+.insertNew
+{
+    
+    position:relative;
+    width: 100px;
+    height: 30px;
+    background-color: #99e2d0;
+    border-radius: 3px;
+    right: -230px;
+    top: -160px;
+}
+.newSize
+{
+    position: relative;
+    text-align: center;
+    top: 5px;
+    color: #0e8f70;
+}
+.imgSize
+{
+    object-fit: cover;
+    background-position: center;
+    height: 170px;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.margePlace
+{
+    padding-left: 10px;
+    margin-top:-50px;
+}
+.marginPlace
+{
+    margin-top: -10px;
+}
+.iconPosition
+{
+    position: relative;
+    left: 290px;
+    bottom: 50px;
+}
+.colorCoeur
+{
+    position: relative;
+    left:254px;
+    bottom: 50px;
+    background: linear-gradient(#9356dc #ff79da );
 }
