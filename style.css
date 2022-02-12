@@ -57,13 +57,14 @@ body
 nav
 {
     font-family: 'Shrikhand', cursive;
-    height: 90px;
-    margin-top: -20px;
+    height: 70px;
+    margin-top: -10px;
     position: relative;
     font-size: larger;
     text-align: center; /* Pour mettre le texte au centre horizontalement */
     box-shadow: 0 0 5px 3px grey;/* Ombre vers le bas */
     padding: 0.1px;
+    cursor: pointer;
 }
 main
 {
@@ -209,7 +210,7 @@ ol
 .blokResto
 {
     width: 100%;
-    height: 800px;
+    height: 1200px;
     background-color: #f6f6f6;
     margin-top: 60px;
     padding-top:30px;
@@ -217,12 +218,13 @@ ol
 .carteResto
 {
     background-color: white;
-    height: 260px;
+    height: 245px;
     width: 340px;
-    margin-left: 8px;
+    margin-left: 7px;
     border-radius: 20px 20px 20px 20px;
     box-shadow: grey 0 3px 5px;
     transition: transform 150ms;
+    margin-bottom: 20px;
 }
 .carteResto:hover
 {
@@ -231,8 +233,7 @@ ol
     cursor: pointer;
 }
 .insertNew
-{
-    
+{ 
     position:relative;
     width: 100px;
     height: 30px;
@@ -261,6 +262,11 @@ ol
     padding-left: 10px;
     margin-top:-50px;
 }
+.margePlace2 /* Pour les cartes dépuorvue de l'encart bleu-vert "Nouveau" */
+{
+    padding-left: 10px;
+    margin-top: -3px;
+}
 .marginPlace
 {
     margin-top: -10px;
@@ -277,4 +283,34 @@ ol
     left:254px;
     bottom: 50px;
     background: linear-gradient(#9356dc #ff79da );
+}
+/* Footer */
+.backgroundFooter
+{
+    width: 100%;
+    height: 230px;
+    background-color: #353535;
+}
+.paddingTexte
+{
+    padding-left: 40px;
+}
+.policeLogo
+{
+    font-family: 'Shrikhand', cursive;
+    color: white;
+    padding-top: 20px;
+}
+.policeBlanche
+{
+    color:white;
+    text-decoration: none;
+}
+.fas fa-utensil
+{
+    padding-right: 20px; /* espacement entre l'icône et le texte */
+}
+.fas fa-hands-helping
+{
+    padding-right: 10px;
 }
