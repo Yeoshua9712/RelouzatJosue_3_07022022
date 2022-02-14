@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 body
 {
-    max-width: 410px;
+    max-width: 480px;
     margin:auto;
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
 }
 /* Mes mode flexbox */
 .flexCentre
@@ -62,7 +62,7 @@ nav
     position: relative;
     font-size: larger;
     text-align: center; /* Pour mettre le texte au centre horizontalement */
-    box-shadow: 0 0 5px 3px grey;/* Ombre vers le bas */
+    box-shadow: 0 3px 5px grey;/* Ombre vers le bas */
     padding: 0.1px;
     cursor: pointer;
 }
@@ -215,7 +215,7 @@ ol
     margin-top: 60px;
     padding-top:30px;
 }
-.carteResto
+.carteResto1
 {
     background-color: white;
     height: 245px;
@@ -226,7 +226,58 @@ ol
     transition: transform 150ms;
     margin-bottom: 20px;
 }
-.carteResto:hover
+.carteResto1:hover
+{
+    transform: scale(1.05);
+    opacity: 0.9;
+    cursor: pointer;
+}
+.carteResto2
+{
+    background-color: white;
+    height: 245px;
+    width: 340px;
+    margin-left: 7px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: grey 0 3px 5px;
+    transition: transform 150ms;
+    margin-bottom: 20px;
+}
+.carteResto2:hover
+{
+    transform: scale(1.05);
+    opacity: 0.9;
+    cursor: pointer;
+}
+.carteResto3
+{
+    background-color: white;
+    height: 245px;
+    width: 340px;
+    margin-left: 7px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: grey 0 3px 5px;
+    transition: transform 150ms;
+    margin-bottom: 20px;
+}
+.carteResto3:hover
+{
+    transform: scale(1.05);
+    opacity: 0.9;
+    cursor: pointer;
+}
+.carteResto4
+{
+    background-color: white;
+    height: 245px;
+    width: 340px;
+    margin-left: 7px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: grey 0 3px 5px;
+    transition: transform 150ms;
+    margin-bottom: 20px;
+}
+.carteResto4:hover
 {
     transform: scale(1.05);
     opacity: 0.9;
@@ -271,11 +322,19 @@ ol
 {
     margin-top: -10px;
 }
-.iconPosition
+.iconPosition /* Les icônes coeur */
 {
+    background-color: inherit-start;
     position: relative;
+    cursor: pointer;
     left: 290px;
     bottom: 50px;
+    transition: all 450ms;
+}   
+.iconPosition:hover
+{
+    transform: scale (1.13);
+    background-color: linear-Gradient(#9356dc #ff79da )-end;
 }
 .colorCoeur
 {
@@ -313,4 +372,99 @@ ol
 .fas fa-hands-helping
 {
     padding-right: 10px;
+}
+.margeIconeFooter1
+{
+    padding-right: 15px;
+    font-size: smaller;
+}
+.margeIconeFooter2
+{
+    padding-right: 8px;
+    font-size: smaller;
+}
+/* Page1.html: La palette du goût */
+nav page1.html
+{
+    font-family: 'Shrikhand', cursive;
+    height: 70px;
+    margin-top: -10px;
+    position: relative;
+    font-size: larger;
+    text-align: center; /* Pour mettre le texte au centre horizontalement */
+    padding: 0.1px;
+    cursor: pointer;
+}
+.positionTitle
+{
+    position:static;
+    padding-right: 90px;
+    padding-left:70px;
+}
+.flèchePosition
+{
+    position: relative;
+    padding-right: 0;
+    font-size:smaller;
+}
+.backgroundImage1
+{
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    position: relative;
+}
+.backgroundMenu
+{
+    height: 1500px;
+    background-color:#f6f6f6;
+    border-radius: 30px;
+    padding-top: 20px;
+    margin-top: -50px;
+    position: relative;
+}
+.setTitre
+{
+    font-family: 'Shrikhand', cursive;
+    color:black;
+    text-align: center;
+    font-size: x-large;
+}
+.heartMarge
+{
+    padding-left: 60px;
+}
+.setTexte
+{
+    color: black;
+    padding-left: 20px;
+}
+.barreVerte
+{
+    border: 1px solid #99e2d0;
+    width: 40px;
+    margin-left: 20px;
+    margin-top: -10px;
+}
+.cellue1
+{
+    width: 350px;
+    height: 70px;
+    margin-left: 12px;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 3px 5px grey;
+}
+.prixAlignement
+{
+    padding-left: 138px;
+}
+.prixAlignement2
+{
+    padding-left: 70px;
+}
+.prixAlignement3
+{
+    padding-left: 0;
 }
