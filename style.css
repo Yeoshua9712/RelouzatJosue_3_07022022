@@ -1,10 +1,84 @@
 /* Réglage général*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 body
-{
-    max-width: 480px;
+{  
+    max-width: 1920px;
     margin:auto;
     font-family: 'Roboto', sans-serif;
+}
+/* ANIMATIONS GéNéRALES */
+#loader/* Partie temps de chargement (loading); ouverture sur fond blanc */
+{
+    position: fixed;
+    inset: 0; /* Inclut: top, bottom, left, right le tout à 0 */
+    background-color: white;
+    height: 100%;
+    z-index: 20;
+    margin: auto;
+    animation: loader 3s linear;
+    transform-origin: center;
+    visibility: hidden;
+}
+@keyframes loader/* Animation loader */
+{
+    from {
+        visibility: visible;
+        opacity: 0.9;
+        
+    }
+    to {
+        opacity:0;
+        visibility: hidden;
+    }
+}
+.spinner/* Animation de la boucle de chargement aux couleurs du site Ohmyfood*/
+{
+    -webkit-box-pack: center;
+    position: fixed;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    inset: 0;
+    z-index: 20;
+    border: 15px solid #0e8f70;
+    width: 80px;
+    height: 80px;
+    border-top-color: #9356dc;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: chargeur 3s linear infinite;
+}
+@keyframes chargeur
+{
+    form
+    {
+        transform: rotate(0deg) scale(1);
+        border-top-color: transparent;
+        border-bottom-color: #9356dc;
+    }
+    25%
+    {
+        border-top-color: transparent;
+        border-bottom-color: #0e8f70;
+    }
+    50%
+    {
+        transform: rotate(360deg) scale(1);
+        border-top-color: transparent;
+        border-bottom-color: #9356dc;
+    }
+    75%
+    {
+        border-top-color: transparent;
+        border-bottom-color: #0e8f70;
+    }
+    100%
+    {
+        transform: rotate(720deg) scale(1);
+        border-top-color: transparent;
+        border-bottom-color: #9356dc;
+    }
 }
 /* Mes mode flexbox */
 .flexCentre
@@ -324,17 +398,34 @@ ol
 }
 .iconPosition /* Les icônes coeur */
 {
-    background-color: inherit-start;
+    background-color: transparent;
     position: relative;
     cursor: pointer;
     left: 290px;
     bottom: 50px;
-    transition: all 450ms;
 }   
-.iconPosition:hover
+.carteResto1 > .fas
 {
-    transform: scale (1.13);
-    background-color: linear-Gradient(#9356dc #ff79da )-end;
+    color: transparent;
+    background-image: linear-gradient(#9356dc #ff79da );
+    opacity: 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: all 300ms;
+}
+.carteResto1 > .fas:hover
+{
+    opacity: 1;
+    transform-origin: bottom;
+    cursor: pointer;
+}
+
+.iconPosition2
+{
+    position: relative;
+    cursor: pointer;
+    left: 254px;
+    bottom: 50px;
 }
 .colorCoeur
 {
@@ -416,9 +507,9 @@ nav page1.html
 }
 .backgroundMenu
 {
-    height: 1500px;
+    height: 1200px;
     background-color:#f6f6f6;
-    border-radius: 30px;
+    border-radius: 30px 30px 0 0;
     padding-top: 20px;
     margin-top: -50px;
     position: relative;
@@ -430,6 +521,10 @@ nav page1.html
     text-align: center;
     font-size: x-large;
 }
+.margeMenu
+{
+    margin-top: 40px;
+}
 .heartMarge
 {
     padding-left: 60px;
@@ -439,12 +534,22 @@ nav page1.html
     color: black;
     padding-left: 20px;
 }
+.setTtitreMenu
+{
+    margin-top: 40px;
+}
+.setTexteDetail
+{
+    padding-top: 10px;
+    margin-bottom: -10px;
+}
 .barreVerte
 {
     border: 1px solid #99e2d0;
     width: 40px;
     margin-left: 20px;
     margin-top: -10px;
+    margin-bottom: -4px;
 }
 .cellue1
 {
@@ -455,6 +560,7 @@ nav page1.html
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 3px 5px grey;
+    font-size: small;
 }
 .prixAlignement
 {
@@ -467,4 +573,59 @@ nav page1.html
 .prixAlignement3
 {
     padding-left: 0;
+}
+.prixAlignement4
+{
+    padding-left: 10px;
+}
+/* Bouton "Commander" */
+.commanderBouton
+{
+    width: 50%;
+    height: 50px;
+    border-radius: 50px;
+    margin-left: 25%;
+    margin-top: 40px;
+    background: linear-gradient(170deg, #ff79da, #9356dc);/* Permet d'émettre deux couleurs en dégradé */
+    box-shadow: grey 0 3px 5px;
+    transition: transform 150ms;
+}
+.commanderBouton:hover
+{
+    transform: scale(1.05);
+    opacity: 0.9;
+    cursor: pointer;
+}
+.cellue1 > .menuTchek
+{
+    position: relative;
+    background-color: #99e2d0;
+    height: 70px;
+    width:60px;
+    border-radius: 0 20px 20px 0;
+    margin-left: 365px;
+    margin-top: -74px;
+    overflow: hidden;
+}
+.cellue1 > .menuTchek:hover
+{
+    position: relative;
+    background-color: #99e2d0;
+    height: 70px;
+    width:60px;
+    border-radius: 0 20px 20px 0;
+    margin-right: 0;
+    margin-top: -74px;
+    overflow: auto;
+    cursor: pointer;
+    transition: margin-right 0.5s;
+}
+.doneColor
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding-top: 20px;
+    
 }

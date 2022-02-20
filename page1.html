@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
     <!--HEADER-->
     <header>
         <nav>
@@ -29,42 +32,70 @@
                     <h3 class="setTitre">La palette du goût<i class="far fa-heart heartMarge"></i></h3>
                     <p class="setTexte">ENTRÉES</p>
                     <div class="barreVerte"></div>
-                    <div class="cellue1">
-                        <h3 class="setTexte">Fricassée d'escargot</h3> 
-                        <p class="setTexte">Au pimet d'espelette<strong class="setTexte prixAlignement">25€</strong></p>                   
+                    <div class="cellue1 margeMenu">
+                        <div class="menuCell">      
+                            <h3 class="setTexte setTexteDetail">Fricassée d'escargot</h3> 
+                            <p class="setTexte">Au pimet d'espelette<strong class="setTexte prixAlignement">25€</strong></p> 
+                        </div> 
+                        <div class="menuTchek">
+                            <i class="fas fa-check-circle fa-2x doneColor"></i>
+                        </div>   
                     </div>
                     <div>
-                        <div class="cellue1">
-                            <h3 class="setTexte">Foie gras de canard mi-cuit</h3> 
+                        <div class="cellue1 margeMenu">
+                            <h3 class="setTexte setTexteDetail">Foie gras de canard mi-cuit</h3> 
                             <p class="setTexte">Et ses copeaux de truffe noire<strong class="setTexte prixAlignement2">35€</strong></p>                   
                         </div>                 
                     </div>
                     <div>
-                        <div class="cellue1">
-                            <h3 class="setTexte">Oeuf au plat</h3> 
+                        <div class="cellue1 margeMenu">
+                            <h3 class="setTexte setTexteDetail">Oeuf au plat</h3> 
                             <p class="setTexte">Assaisonné à la truffe sur lit de caviard <strong class="setTexte prixAlignement3">20€</strong></p>                   
                         </div>                 
                     </div>
                 </div>
                 <div>
-                    <p class="setTexte">PLATS</p>
+                    <p class="setTexte setTtitreMenu">PLATS</p>
                     <div class="barreVerte"></div>
-                    <div class="cellue1">
-                        <h3 class="setTexte">Fricassée d'escargot</h3> 
-                        <p class="setTexte">Au pimet d'espelette<strong class="setTexte prixAlignement">25€</strong></p>                   
+                    <div class="cellue1 margeMenu">
+                        <h3 class="setTexte setTexteDetail">Filet de boeuf aux herbes</h3> 
+                        <p class="setTexte">Accompagné de sa ribambelle de légumes<strong class="setTexte prixAlignement4">40€</strong></p>                   
                     </div>
                     <div>
-                        <div class="cellue1">
-                            <h3 class="setTexte">Foie gras de canard mi-cuit</h3> 
-                            <p class="setTexte">Et ses copeaux de truffe noire<strong class="setTexte prixAlignement2">35€</strong></p>                   
+                        <div class="cellue1 margeMenu">
+                            <h3 class="setTexte setTexteDetail">Parmentier de queue de boeuf</h3> 
+                            <p class="setTexte">A la truff noire sur sa purée de panais<strong class="setTexte prixAlignement5">35€</strong></p>                   
+                        </div>                 
+                    </div>
+                    <div>
+                        <div class="cellue1 margeMenu">
+                            <h3 class="setTexte setTexteDetail">Filet de turbot</h3> 
+                            <p class="setTexte">Aux légumes<strong class="setTexte prixAlignement6">44€</strong></p>                   
+                        </div>                 
+                    </div>
+                </div>
+                <div>
+                    <p class="setTexte setTtitreMenu">DESSERTS</p>
+                    <div class="barreVerte"></div>
+                    <div class="cellue1 margeMenu">
+                        <h3 class="setTexte setTexteDetail">Paris-Brest</h3> 
+                        <p class="setTexte">Revisité<strong class="setTexte prixAlignement4">18€</strong></p>                   
+                    </div>
+                    <div>
+                        <div class="cellue1 margeMenu">
+                            <h3 class="setTexte setTexteDetail">Macaron au chocolat d'exception</h3> 
+                            <p class="setTexte">Et glace à la vanille de Madagascar<strong class="setTexte prixAlignement5">22€</strong></p>                   
                         </div>                 
                     </div>
                     <div>
                         <div class="cellue1">
-                            <h3 class="setTexte">Oeuf au plat</h3> 
-                            <p class="setTexte">Assaisonné à la truffe sur lit de caviard <strong class="setTexte prixAlignement2">2€</strong></p>                   
+                            <h3 class="setTexte setTexteDetail">Mousse au chocolat</h3> 
+                            <p class="setTexte">Au pimet d'Espelette et à la truffe noire<strong class="setTexte prixAlignement6">23€</strong></p>                   
                         </div>                 
                     </div>
+                </div>
+                <div class="flexCentre commanderBouton">
+                    <p class="texetColorBouton">Commander</p>
                 </div>
             </div>
         </section>
