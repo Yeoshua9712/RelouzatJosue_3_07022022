@@ -51,7 +51,7 @@ body
 }
 @keyframes chargeur
 {
-    form
+    form /* Ou 0%, c'est pareil */
     {
         transform: rotate(0deg) scale(1);
         border-top-color: transparent;
@@ -73,7 +73,7 @@ body
         border-top-color: transparent;
         border-bottom-color: #0e8f70;
     }
-    100%
+    to /* Ou 100%, c'est pareil*/
     {
         transform: rotate(720deg) scale(1);
         border-top-color: transparent;
@@ -505,6 +505,7 @@ nav page1.html
     height: 250px;
     position: relative;
 }
+/* Les MENUS */
 .backgroundMenu
 {
     height: 1200px;
@@ -514,7 +515,7 @@ nav page1.html
     margin-top: -50px;
     position: relative;
 }
-.setTitre
+.menuTitre
 {
     font-family: 'Shrikhand', cursive;
     color:black;
@@ -529,19 +530,21 @@ nav page1.html
 {
     padding-left: 60px;
 }
-.setTexte
+.menuTexte
 {
     color: black;
     padding-left: 20px;
+    text-overflow: ellipsis;/* Effet des trois points de suspention */
+    overflow: hidden;
 }
-.setTtitreMenu
+.menuTtitreMenu
 {
     margin-top: 40px;
 }
-.setTexteDetail
+.menuTexteDetail
 {
-    padding-top: 10px;
     margin-bottom: -10px;
+    margin-top: 0;
 }
 .barreVerte
 {
@@ -551,7 +554,7 @@ nav page1.html
     margin-top: -10px;
     margin-bottom: -4px;
 }
-.cellue1
+.cellue1 /* Cellules sur lesquels sont inscrits les menus et les prix */
 {
     width: 350px;
     height: 70px;
@@ -560,24 +563,75 @@ nav page1.html
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 3px 5px grey;
-    font-size: small;
+    overflow: hidden;
+    cursor: pointer;
+}
+.menuDescription
+{
+    margin: 10px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .prixAlignement
 {
-    padding-left: 138px;
+    position: relative;
+    right:-130px;
+    cursor: pointer;
 }
-.prixAlignement2
+.prixMenu
 {
-    padding-left: 70px;
+    margin-left: auto;
+    padding-top: 40px;
+    padding-right: 30px;
 }
-.prixAlignement3
+.menuCell .confirmation
 {
-    padding-left: 0;
+    position: relative;
+    background-color: #99e2d0;
+    border-radius: 0 20px 20px 0;
+    right: 0;
+    padding: 0 13px;
+    height: 70px;
+    width: 30px;
+    margin-right: -60px;
+    transition: margin-right 0.5s;
 }
-.prixAlignement4
+.menuCell:hover .confirmation
 {
-    padding-left: 10px;
+    margin-right: 0px;
 }
+.doneColor
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    transform:rotate(0deg);
+}
+.menuCell:hover i
+{
+    animation: quarterspin 0.5s ease-in;
+}
+@keyframes quarterspin /* Faire pivoter la petite icône de confirmation */
+{
+    from
+    {
+       transform: rotate(-270deg);
+    }
+    to 
+    {
+        transform: rotate(360deg);
+    }
+}
+.menuCell
+{
+    display: flex;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: auto;
+}
+/*.menuCell:hover*/
 /* Bouton "Commander" */
 .commanderBouton
 {
@@ -595,37 +649,4 @@ nav page1.html
     transform: scale(1.05);
     opacity: 0.9;
     cursor: pointer;
-}
-.cellue1 > .menuTchek
-{
-    position: relative;
-    background-color: #99e2d0;
-    height: 70px;
-    width:60px;
-    border-radius: 0 20px 20px 0;
-    margin-left: 365px;
-    margin-top: -74px;
-    overflow: hidden;
-}
-.cellue1 > .menuTchek:hover
-{
-    position: relative;
-    background-color: #99e2d0;
-    height: 70px;
-    width:60px;
-    border-radius: 0 20px 20px 0;
-    margin-right: 0;
-    margin-top: -74px;
-    overflow: auto;
-    cursor: pointer;
-    transition: margin-right 0.5s;
-}
-.doneColor
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    padding-top: 20px;
-    
 }
