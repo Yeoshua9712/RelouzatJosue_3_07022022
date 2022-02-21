@@ -396,30 +396,67 @@ ol
 {
     margin-top: -10px;
 }
+/* Les COEURS */
 .iconPosition /* Les icônes coeur */
 {
-    background-color: transparent;
+    background-image: linear-gradient(#9356dc #ff79da );/* Les dégradés se font TOUJOURS en background-image! */
     position: relative;
     cursor: pointer;
     left: 290px;
     bottom: 50px;
-}   
-.carteResto1 > .fas
+}  
+.carteResto1 .far
 {
-    color: transparent;
-    background-image: linear-gradient(#9356dc #ff79da );
+    background: linear-gradient(#9356dc #ff79da );/* Les dégradés se font TOUJOURS en background-image! */
+}
+.carteResto1 .fas
+{   
     opacity: 0;
     background-clip: text;
-    -webkit-background-clip: text;
     transition: all 300ms;
 }
-.carteResto1 > .fas:hover
+.carteResto1 .fas:hover
 {
     opacity: 1;
     transform-origin: bottom;
     cursor: pointer;
 }
-
+.carteResto2 .fas
+{   
+    opacity: 0;
+    background-clip: text;
+    transition: all 300ms;
+}
+.carteResto2 .fas:hover
+{
+    opacity: 1;
+    transform-origin: bottom;
+    cursor: pointer;
+}
+.carteResto3 .fas
+{   
+    opacity: 0;
+    background-clip: text;
+    transition: all 300ms;
+}
+.carteResto3 .fas:hover
+{
+    opacity: 1;
+    transform-origin: bottom;
+    cursor: pointer;
+}
+.carteResto4 .fas
+{   
+    opacity: 0;
+    background-clip: text;
+    transition: all 300ms;
+}
+.carteResto4 .fas:hover
+{
+    opacity: 1;
+    transform-origin: bottom;
+    cursor: pointer;
+}
 .iconPosition2
 {
     position: relative;
@@ -432,7 +469,7 @@ ol
     position: relative;
     left:254px;
     bottom: 50px;
-    background: linear-gradient(#9356dc #ff79da );
+    background-image: linear-gradient(#9356dc #ff79da );
 }
 /* Footer */
 .backgroundFooter
@@ -540,6 +577,7 @@ nav page1.html
 .menuTtitreMenu
 {
     margin-top: 40px;
+    font-size:large;
 }
 .menuTexteDetail
 {
@@ -548,7 +586,7 @@ nav page1.html
 }
 .barreVerte
 {
-    border: 1px solid #99e2d0;
+    border: 2px solid #99e2d0;
     width: 40px;
     margin-left: 20px;
     margin-top: -10px;
@@ -572,17 +610,11 @@ nav page1.html
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.prixAlignement
-{
-    position: relative;
-    right:-130px;
-    cursor: pointer;
-}
 .prixMenu
 {
     margin-left: auto;
     padding-top: 40px;
-    padding-right: 30px;
+    padding-right: 20px;
 }
 .menuCell .confirmation
 {
