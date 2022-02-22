@@ -7,7 +7,7 @@ body
     font-family: 'Roboto', sans-serif;
 }
 /* ANIMATIONS GéNéRALES */
-#loader/* Partie temps de chargement (loading); ouverture sur fond blanc */
+#loader/* Partie temps de chargement (loading) pour l'index.html (page d'accueil); avec ouverture sur fond blanc */
 {
     position: fixed;
     inset: 0; /* Inclut: top, bottom, left, right le tout à 0 */
@@ -21,7 +21,7 @@ body
 }
 @keyframes loader/* Animation loader */
 {
-    from {
+    from { 
         visibility: visible;
         opacity: 0.9;
         
@@ -254,7 +254,7 @@ main
     opacity: 0.9;
     cursor: pointer;
 }
-.flexColumnTuto li::before
+.flexColumnTuto li::before /* La partie liste énumérée + icônes */
 {
     content: counter(étapes);
     counter-increment: étapes;
@@ -387,7 +387,7 @@ ol
     padding-left: 10px;
     margin-top:-50px;
 }
-.margePlace2 /* Pour les cartes dépuorvue de l'encart bleu-vert "Nouveau" */
+.margePlace2 /* Pour les cartes dépuorvues de l'encart bleu-vert "Nouveau" */
 {
     padding-left: 10px;
     margin-top: -3px;
@@ -572,14 +572,44 @@ nav page1.html
     font-size: x-large;
     margin:0;
 }
+.menuTitre1
+{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    flex-direction: row;
+}
 .margeMenu
 {
     margin-top: 40px;
 }
-.heartMarge
+/* Heart ANIATION */
+.iconPositionPage
 {
-    padding-left: 60px;
+    position: absolute;
+    cursor: pointer;
 }
+.iconPositionPageHeart
+{
+    position: relative;
+    cursor: pointer;
+}
+.coeurAnim .fas/* Ici, la class="coeurAnim" est uniquement dédiée à l'animation avec les coeurs */
+{
+    opacity:0;
+    background-clip: text;
+    transition: all 300ms ease-in-out;
+    background-image: linear-gradient(100deg, #9356dc, #ff79da);
+    cursor: pointer;
+}
+.coeurAnim .fas:hover
+{
+    opacity: 1;
+    transform-origin: bottom;
+    
+}
+
 .menuTexte
 {
     color: black;
@@ -616,6 +646,7 @@ nav page1.html
     box-shadow: 0 3px 5px grey;
     overflow: hidden;
     cursor: pointer;
+    animation: pouf 0.6s;
 }
 .menuDescription
 {
@@ -693,4 +724,62 @@ nav page1.html
     transform: scale(1.05);
     opacity: 0.9;
     cursor: pointer;
+}
+/* Apparition des blocs menus (animation) */
+.delay0
+{
+    animation-delay: 900ms;
+}
+.delay1
+{
+    animation-delay: 800ms;
+}
+.delay2
+{
+    animation-delay: 700ms;
+}
+.delay3
+{
+    animation-delay: 600ms;
+}
+.delay4
+{
+    animation-delay: 500ms;
+}
+.delay5
+{
+    animation-delay: 400ms;
+}
+.delay6
+{
+    animation-delay: 300ms;
+}
+.delay7
+{
+    animation-delay: 200ms;
+}
+.delay8
+{
+    animation-delay: 100ms;
+}
+
+.cellue1 .delay0 .delay1 .delay2 .delay3 
+.delay4 .delay5 .delay6 .delay7 .delay8
+{
+    animation-fill-mode: both;
+    max-width: 100%;
+    transform: scale(0);
+    animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+   
+}
+@keyframes pouf
+{
+    from
+    {
+        transform: scale(0);
+    }
+    to 
+    {
+        transform: scale(1);
+    }
 }
