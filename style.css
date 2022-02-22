@@ -728,19 +728,19 @@ nav page1.html
 /* Apparition des blocs menus (animation) */
 .delay0
 {
-    animation-delay: 900ms;
+    animation-delay: 100ms;
 }
 .delay1
 {
-    animation-delay: 800ms;
+    animation-delay: 200ms;
 }
 .delay2
 {
-    animation-delay: 700ms;
+    animation-delay: 300ms;
 }
 .delay3
 {
-    animation-delay: 600ms;
+    animation-delay: 400ms;
 }
 .delay4
 {
@@ -748,19 +748,19 @@ nav page1.html
 }
 .delay5
 {
-    animation-delay: 400ms;
+    animation-delay: 600ms;
 }
 .delay6
 {
-    animation-delay: 300ms;
+    animation-delay: 700ms;
 }
 .delay7
 {
-    animation-delay: 200ms;
+    animation-delay: 800ms;
 }
 .delay8
 {
-    animation-delay: 100ms;
+    animation-delay: 900ms;
 }
 
 .cellue1 .delay0 .delay1 .delay2 .delay3 
