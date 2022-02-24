@@ -51,7 +51,7 @@ body
 }
 @keyframes chargeur
 {
-    form /* Ou 0%, c'est pareil */
+    from /* Ou 0%, c'est pareil */
     {
         transform: rotate(0deg) scale(1);
         border-top-color: transparent;
@@ -264,7 +264,7 @@ main
     height: 20px;
     border-radius: 50%;
     left: -60px;
-    display: inline flow-root list-item;
+    display: inline-block;
     position: relative;
 }
 ol
@@ -406,15 +406,14 @@ ol
 }  
 .colorRadiant
 {
-    color: transparent;
-    background-image: linear-gradient(100deg,#9356dc,#ff79da );/* Les dégradés se font TOUJOURS en background-image! */
+    color: transparent;/* Le transparant permet la manifestation du linear-gradient */
 }
 .carteResto1 .fas
 {   
     z-index: 10;
     opacity: 0;
     background-clip: text;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text;/* Le préfixe "-webkit-" permet d'appliquer la propriété quelque soit l'explorateur */
     transition: all 300ms ease-in-out;
     background-image: linear-gradient(100deg,#9356dc,#ff79da);
 }
@@ -475,13 +474,6 @@ ol
     cursor: pointer;
     left: 254px;
     bottom: 50px;
-}
-.colorCoeur
-{
-    position: relative;
-    left:254px;
-    bottom: 50px;
-    background-image: linear-gradient(#9356dc #ff79da );
 }
 /* Footer */
 .backgroundFooter
@@ -598,6 +590,7 @@ nav page1.html
 .coeurAnim .fas/* Ici, la class="coeurAnim" est uniquement dédiée à l'animation avec les coeurs */
 {
     opacity:0;
+    -webkit-background-clip: text;
     background-clip: text;
     transition: all 300ms ease-in-out;
     background-image: linear-gradient(100deg, #9356dc, #ff79da);
@@ -684,7 +677,7 @@ nav page1.html
 {
     from
     {
-        transform: rotate(-270deg);
+        transform: rotate(0deg);
     }
     to 
     {
@@ -770,7 +763,7 @@ nav page1.html
     max-width: 100%;
     transform: scale(0);
     animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-   
+    animation: pouf 0.8s;
 }
 @keyframes pouf
 {
@@ -781,5 +774,12 @@ nav page1.html
     to 
     {
         transform: scale(1);
+    }
+}
+/* Responsive design: breakpoints - 768px - 1440px */
+@media screen and (max-width: 768px){
+    body
+    {
+        width: 100%;
     }
 }
