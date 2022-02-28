@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 body
 {  
-    max-width: 1920px;
     margin:auto;
     font-family: 'Roboto', sans-serif;
 }
@@ -80,7 +79,7 @@ body
         border-bottom-color: #9356dc;
     }
 }
-/* Mes mode flexbox */
+/* Modes flexbox */
 .flexCentre
 {
     display: flex;
@@ -123,13 +122,18 @@ body
     text-decoration: none;
     color:black;
 }
-.texetColorBouton
-{
-    color: white;
-}
 /* Fin des réglages */
-nav
-{
+
+    border-style
+    {
+        margin: auto;
+    }
+    .texetColorBouton
+    {
+        color: white;
+    }
+    nav
+    {
     font-family: 'Shrikhand', cursive;
     height: 70px;
     margin-top: -10px;
@@ -175,10 +179,11 @@ main
 }
 .restoBouton
 {
-    width: 60%;
+    
+    width: 230px;
     height: 50px;
     border-radius: 50px;
-    margin-left: 20%;
+    margin: auto;
     background: linear-gradient(170deg, #ff79da, #9356dc);/* Permet d'émettre deux couleurs en dégradé */
     box-shadow: grey 0 3px 5px;
     transition: transform 150ms;
@@ -187,12 +192,15 @@ main
 {
     transform: scale(1.05);
     opacity: 0.9;
+    box-shadow: rgb(67, 67, 67) 0 3px 5px;
     cursor: pointer;
 }
 /* Fonctionnement */
 .margeTitre
 {
     padding-left: 10px;
+    margin: 0 10px 20px 10px;
+    position: relative;
 }
 .caseFonctionnement
 {
@@ -228,6 +236,7 @@ main
 {
     margin-left: 70px;
 }
+/* Les trois cases tuto */
 .flexColumnTuto
 {
     counter-reset: étapes;
@@ -252,6 +261,7 @@ main
 {
     transform: scale(1.05);
     opacity: 0.9;
+    box-shadow: rgb(67, 67, 67) 0 3px 5px;
     cursor: pointer;
 }
 .flexColumnTuto li::before /* La partie liste énumérée + icônes */
@@ -293,85 +303,95 @@ ol
 {
     background-color: white;
     height: 245px;
-    width: 340px;
-    margin-left: 7px;
+    width: 96%;
+    margin-left: 3px;
     border-radius: 20px 20px 20px 20px;
     box-shadow: grey 0 3px 5px;
     transition: transform 150ms;
     margin-bottom: 20px;
+    position: relative;
 }
 .carteResto1:hover
 {
     transform: scale(1.05);
     opacity: 0.9;
+    box-shadow: rgb(67, 67, 67) 0 3px 5px;/* Effet d'ombre plus accentué au survol */
     cursor: pointer;
 }
 .carteResto2
 {
     background-color: white;
     height: 245px;
-    width: 340px;
-    margin-left: 7px;
+    width: 96%;
+    margin-left: 3px;
     border-radius: 20px 20px 20px 20px;
     box-shadow: grey 0 3px 5px;
     transition: transform 150ms;
     margin-bottom: 20px;
+    position: relative;
 }
 .carteResto2:hover
 {
     transform: scale(1.05);
     opacity: 0.9;
+    box-shadow: rgb(67, 67, 67) 0 3px 5px;
     cursor: pointer;
 }
 .carteResto3
 {
     background-color: white;
     height: 245px;
-    width: 340px;
-    margin-left: 7px;
+    width: 96%;
+    margin-left: 3px;
     border-radius: 20px 20px 20px 20px;
     box-shadow: grey 0 3px 5px;
     transition: transform 150ms;
     margin-bottom: 20px;
+    position: relative;
 }
 .carteResto3:hover
 {
     transform: scale(1.05);
     opacity: 0.9;
+    box-shadow: rgb(67, 67, 67) 0 3px 5px;
     cursor: pointer;
 }
 .carteResto4
 {
     background-color: white;
     height: 245px;
-    width: 340px;
-    margin-left: 7px;
+    width: 96%;
+    margin-left: 3px;
     border-radius: 20px 20px 20px 20px;
     box-shadow: grey 0 3px 5px;
     transition: transform 150ms;
     margin-bottom: 20px;
+    position: relative;
 }
 .carteResto4:hover
 {
     transform: scale(1.05);
     opacity: 0.9;
+    box-shadow: rgb(67, 67, 67) 0 3px 5px;
     cursor: pointer;
 }
 .insertNew
 { 
-    position:relative;
-    width: 100px;
+    position: absolute;
+    width: 80px;
     height: 30px;
     background-color: #99e2d0;
     border-radius: 3px;
-    right: -230px;
-    top: -160px;
+    right: 20px;
+    top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .newSize
 {
     position: relative;
     text-align: center;
-    top: 5px;
     color: #0e8f70;
 }
 .imgSize
@@ -384,8 +404,8 @@ ol
 }
 .margePlace
 {
+    position: relative;
     padding-left: 10px;
-    margin-top:-50px;
 }
 .margePlace2 /* Pour les cartes dépuorvues de l'encart bleu-vert "Nouveau" */
 {
@@ -399,11 +419,18 @@ ol
 /* Les COEURS */
 .iconPosition /* Les icônes coeur */
 {
+    position: absolute;
+    cursor: pointer;
+    left: 85%;
+    bottom: 16px;
+}  
+.iconPosition2
+{
     position: relative;
     cursor: pointer;
-    left: 290px;
+    left: 85%;
     bottom: 50px;
-}  
+}
 .colorRadiant
 {
     color: transparent;/* Le transparant permet la manifestation du linear-gradient */
@@ -413,8 +440,8 @@ ol
     z-index: 10;
     opacity: 0;
     background-clip: text;
-    -webkit-background-clip: text;/* Le préfixe "-webkit-" permet d'appliquer la propriété quelque soit l'explorateur */
-    transition: all 300ms ease-in-out;
+    -webkit-background-clip: text;/* Le "-webkit-" permet d'appliquer la propriété quelque soit l'explorateur */
+    transition: all 400ms ease-in-out;
     background-image: linear-gradient(100deg,#9356dc,#ff79da);
 }
 .carteResto1 .fas:hover
@@ -429,7 +456,7 @@ ol
     opacity: 0;
     background-clip: text;
     -webkit-background-clip: text;
-    transition: all 300ms ease-in-out;
+    transition: all 400ms ease-in-out;
     background-image: linear-gradient(100deg,#9356dc,#ff79da);
 }
 .carteResto2 .fas:hover
@@ -444,7 +471,7 @@ ol
     opacity: 0;
     background-clip: text;
     -webkit-background-clip: text;
-    transition: all 300ms ease-in-out;
+    transition: all 400ms ease-in-out;
     background-image: linear-gradient(100deg,#9356dc,#ff79da);
 }
 .carteResto3 .fas:hover
@@ -459,7 +486,7 @@ ol
     opacity: 0;
     background-clip: text;
     -webkit-background-clip: text;
-    transition: all 300ms ease-in-out;
+    transition: all 400ms ease-in-out;
     background-image: linear-gradient(100deg,#9356dc,#ff79da);
 }
 .carteResto4 .fas:hover
@@ -467,13 +494,6 @@ ol
     opacity: 1;
     transform-origin: bottom;
     cursor: pointer;
-}
-.iconPosition2
-{
-    position: relative;
-    cursor: pointer;
-    left: 254px;
-    bottom: 50px;
 }
 /* Footer */
 .backgroundFooter
@@ -535,9 +555,10 @@ nav page1.html
 }
 .flèchePosition
 {
-    position: relative;
-    padding-right: 0;
+    position: absolute;
+    top: 39px;
     font-size:smaller;
+    left: 5%;
 }
 .backgroundImage1
 {
@@ -555,6 +576,11 @@ nav page1.html
     padding-top: 20px;
     margin-top: -50px;
     position: relative;
+}
+.withAdaptative
+{
+    position:relative;
+    width: 100%;
 }
 .menuTitre
 {
@@ -577,6 +603,11 @@ nav page1.html
     margin-top: 40px;
 }
 /* Heart ANIATION */
+.hearts
+{
+    position: absolute;
+    margin-right: 300px;
+}
 .iconPositionPage
 {
     position: absolute;
@@ -592,7 +623,7 @@ nav page1.html
     opacity:0;
     -webkit-background-clip: text;
     background-clip: text;
-    transition: all 300ms ease-in-out;
+    transition: all 400ms ease-in-out;
     background-image: linear-gradient(100deg, #9356dc, #ff79da);
     cursor: pointer;
 }
@@ -630,7 +661,7 @@ nav page1.html
 }
 .cellue1 /* Cellules sur lesquels sont inscrits les menus et les prix */
 {
-    width: 350px;
+    width: 96%;
     height: 70px;
     margin-left: 12px;
     margin-top: 20px;
@@ -645,7 +676,7 @@ nav page1.html
 {
     margin: 10px 0;
     overflow: hidden;
-    text-overflow: ellipsis;/* Permet de faire apparaître les "..." */
+    text-overflow: ellipsis;/* Permet de faire apparaître les "..." (rappel) */
 }
 .prixMenu
 {
@@ -759,12 +790,12 @@ nav page1.html
 .cellue1 .delay0 .delay1 .delay2 .delay3 
 .delay4 .delay5 .delay6 .delay7 .delay8
 {
-    animation-fill-mode: both;
+    animation-fill-mode: both;/* indique la façon dont une animation css doit appliquer les styles à sa cible avant et après son exécution */
     max-width: 100%;
     transform: scale(0);
     animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
     animation: pouf 0.8s;
-}
+}/* animation-timing-function définit la façon dont une animation css doit se dérouler au fur et à mesure de chaque cycle */
 @keyframes pouf
 {
     from
@@ -776,10 +807,42 @@ nav page1.html
         transform: scale(1);
     }
 }
-/* Responsive design: breakpoints - 768px - 1440px */
-@media screen and (max-width: 768px){
+/* Responsive design: breakpoints - 768px - 992px - min-width pour le mobile first */
+@media screen and (min-width: 1200px) { /* min-width: tout ce qui est supérieur ou égal au nombre de pixels souhaité sera effectif */
     body
     {
         width: 100%;
+        margin: auto;
     }
+    .responsive
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+    .backgroundMenu
+    {
+        height: auto;
+        background-color:#f6f6f6;
+    border-radius: 30px 30px 0 0;
+    padding-top: 20px;
+    margin-top: -50px;
+    position: relative;
+    padding-bottom: 50px;
+    }
+    .commanderBouton
+{
+    width: 13%;
+    height: 50px;
+    border-radius: 50px;
+    margin-left: 25%;
+    margin-top: 40px;
+    background: linear-gradient(170deg, #ff79da, #9356dc);/* Permet d'émettre deux couleurs en dégradé */
+    box-shadow: grey 0 3px 5px;
+    transition: transform 150ms;
+    margin:50px auto;
 }
+    
+    
+}   
