@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 body
 {  
+    max-width: 1920px;
     margin:auto;
     font-family: 'Roboto', sans-serif;
 }
@@ -414,7 +415,7 @@ ol
 }
 .marginPlace
 {
-    margin-top: -10px;
+    margin-top: -20px;
 }
 /* Les COEURS */
 .iconPosition /* Les icônes coeur */
@@ -433,7 +434,7 @@ ol
 }
 .colorRadiant
 {
-    color: transparent;/* Le transparant permet la manifestation du linear-gradient */
+    color: transparent;/* Le transparant permet la manifestation du linear-gradient du coeur fas */
 }
 .carteResto1 .fas
 {   
@@ -570,17 +571,19 @@ nav page1.html
 /* Les MENUS */
 .backgroundMenu
 {
-    height: 1200px;
+    
     background-color:#f6f6f6;
     border-radius: 30px 30px 0 0;
     padding-top: 20px;
     margin-top: -50px;
     position: relative;
+    height: 1230px;
 }
 .withAdaptative
 {
     position:relative;
     width: 100%;
+    margin-right:1%;
 }
 .menuTitre
 {
@@ -620,20 +623,31 @@ nav page1.html
 }
 .coeurAnim .fas/* Ici, la class="coeurAnim" est uniquement dédiée à l'animation avec les coeurs */
 {
-    opacity:0;
-    -webkit-background-clip: text;
+    transform: scale(0);
+    -webkit-background-clip: text;/* Effecif sur d'autres explorers */
     background-clip: text;
-    transition: all 400ms ease-in-out;
+    transition: all 600ms ease-in-out;
     background-image: linear-gradient(100deg, #9356dc, #ff79da);
     cursor: pointer;
 }
-.coeurAnim .fas:hover
+.coeurAnim:hover .fas /* Lorsque que le conteneur parent "coeurAnim" est en hover, on change la taille du coeur plein fas */
 {
-    opacity: 1;
-    transform-origin: bottom;
-    
+    transform: scale(1.1);
+    transform-origin: bottom; /* point de départ de la transformation */
 }
-
+.coeurAnim .far/* Faire rétressir le coeur far pour laisser place au coeur fas */
+{
+    transform: scale(O);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: all 600ms ease-in-out;
+}
+.coeurAnim:hover .far
+{
+    transform: scale(1);
+    color: white;
+    transform-origin: bottom;
+}
 .menuTexte
 {
     color: black;
@@ -704,7 +718,7 @@ nav page1.html
 {
     animation: quarterspin 0.3s 0.2s ease-in;
 }
-@keyframes quarterspin /* Faire pivoter la petite icône de confirmation */
+@keyframes quarterspin /* Animation: faire pivoter la petite icône de confirmation */
 {
     from
     {
@@ -734,22 +748,27 @@ nav page1.html
 /* Bouton "Commander" */
 .commanderBouton
 {
-    width: 50%;
+    width: 200px;
     height: 50px;
     border-radius: 50px;
-    margin-left: 25%;
+    margin: auto;/* Très utile ici pour le responsive design */
     margin-top: 40px;
     background: linear-gradient(170deg, #ff79da, #9356dc);/* Permet d'émettre deux couleurs en dégradé */
     box-shadow: grey 0 3px 5px;
     transition: transform 150ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:50px auto;
 }
 .commanderBouton:hover
 {
     transform: scale(1.05);
     opacity: 0.9;
     cursor: pointer;
+    box-shadow: #353535 0 3px 5px;/* Accentue l'ombre portée au survol  */
 }
-/* Apparition des blocs menus (animation) */
+/* Apparition progressive des blocs menus (animation) */
 .delay0
 {
     animation-delay: 100ms;
@@ -808,7 +827,8 @@ nav page1.html
     }
 }
 /* Responsive design: breakpoints - 768px - 992px - min-width pour le mobile first */
-@media screen and (min-width: 1200px) { /* min-width: tout ce qui est supérieur ou égal au nombre de pixels souhaité sera effectif */
+@media screen and (min-width: 1000px) { /* min-width: tout ce qui est supérieur ou égal au nombre de pixels souhaité sera effectif */
+    /* Donc à partir des 1000 pixels des changements opéreront {...}: */
     body
     {
         width: 100%;
@@ -825,24 +845,46 @@ nav page1.html
     {
         height: auto;
         background-color:#f6f6f6;
-    border-radius: 30px 30px 0 0;
-    padding-top: 20px;
-    margin-top: -50px;
-    position: relative;
-    padding-bottom: 50px;
+        border-radius: 30px 30px 0 0;
+        padding-top: 20px;
+        margin-top: -50px;
+        position: relative;
+        padding-bottom: 50px;
     }
     .commanderBouton
-{
-    width: 13%;
-    height: 50px;
-    border-radius: 50px;
-    margin-left: 25%;
-    margin-top: 40px;
-    background: linear-gradient(170deg, #ff79da, #9356dc);/* Permet d'émettre deux couleurs en dégradé */
-    box-shadow: grey 0 3px 5px;
-    transition: transform 150ms;
-    margin:50px auto;
-}
-    
-    
+    {
+        width: 13%;
+        height: 50px;
+        border-radius: 50px;
+        margin-left: 25%;
+        margin-top: 40px;
+        background: linear-gradient(170deg, #ff79da, #9356dc);/* Permet d'émettre deux couleurs en dégradé */
+        box-shadow: grey 0 3px 5px;
+        transition: transform 150ms;
+        margin:50px auto;
+    }
+    .flexColumnTuto
+    {
+        counter-reset: étapes;
+        display:flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;      
+    }
+    .block1/* Les cartes changeront de disposition dès les 1000px */
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    .blokResto
+    {
+        width: 100%;
+        height: auto;/* La hauteur s'adapte au changement de disposition des cartes dès le breakpoint de 1000px */
+        background-color: #f6f6f6;
+        margin-top: 60px;
+        padding-top:30px;
+        padding-bottom: 20px;
+    }
 }   
