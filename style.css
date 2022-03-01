@@ -439,62 +439,62 @@ ol
 .carteResto1 .fas
 {   
     z-index: 10;
-    opacity: 0;
+    transform: scale(0);
     background-clip: text;
     -webkit-background-clip: text;/* Le "-webkit-" permet d'appliquer la propriété quelque soit l'explorateur */
     transition: all 400ms ease-in-out;
     background-image: linear-gradient(100deg,#9356dc,#ff79da);
+    cursor: pointer;
 }
 .carteResto1 .fas:hover
 {
-    opacity: 1;
-    transform-origin: bottom;
-    cursor: pointer;
+    transform: scale(1.1);
+    transform-origin: bottom;/* L'effet démarre vers le bas du coeur */
 }
 .carteResto2 .fas
 {   
     z-index: 10;
-    opacity: 0;
+    transform: scale(0);
     background-clip: text;
     -webkit-background-clip: text;
     transition: all 400ms ease-in-out;
     background-image: linear-gradient(100deg,#9356dc,#ff79da);
+    cursor: pointer;
 }
 .carteResto2 .fas:hover
 {
-    opacity: 1;
+    transform: scale(1.1);
     transform-origin: bottom;
-    cursor: pointer;
 }
 .carteResto3 .fas
 {   
     z-index: 10;
-    opacity: 0;
+    transform: scale(0);
     background-clip: text;
     -webkit-background-clip: text;
     transition: all 400ms ease-in-out;
     background-image: linear-gradient(100deg,#9356dc,#ff79da);
+    cursor: pointer;
 }
 .carteResto3 .fas:hover
 {
-    opacity: 1;
+    transform: scale(1.1);
     transform-origin: bottom;
-    cursor: pointer;
 }
 .carteResto4 .fas
 {   
     z-index: 10;
-    opacity: 0;
+    transform: scale(0);
     background-clip: text;
     -webkit-background-clip: text;
     transition: all 400ms ease-in-out;
     background-image: linear-gradient(100deg,#9356dc,#ff79da);
+    cursor: pointer;
 }
 .carteResto4 .fas:hover
 {
-    opacity: 1;
+    transform: scale(1.1);
     transform-origin: bottom;
-    cursor: pointer;
 }
 /* Footer */
 .backgroundFooter
@@ -507,7 +507,7 @@ ol
 {
     padding-left: 40px;
 }
-.policeLogo
+.policeLogo/* Le logo */
 {
     font-family: 'Shrikhand', cursive;
     color: white;
@@ -637,7 +637,7 @@ nav page1.html
 }
 .coeurAnim .far/* Faire rétressir le coeur far pour laisser place au coeur fas */
 {
-    transform: scale(O);
+    transform: scale(0);
     -webkit-background-clip: text;
     background-clip: text;
     transition: all 600ms ease-in-out;
@@ -645,7 +645,7 @@ nav page1.html
 .coeurAnim:hover .far
 {
     transform: scale(1);
-    color: white;
+    color: transparent;/* Effet de disparition du coeur fas */
     transform-origin: bottom;
 }
 .menuTexte
@@ -714,9 +714,9 @@ nav page1.html
 {
     margin-right: 0px;
 }
-.menuCell:hover i
+.menuCell:hover i/* Ce hover agit sur l'icône "done" (coche) */
 {
-    animation: quarterspin 0.3s 0.2s ease-in;
+    animation: quarterspin 0.3s 0.2s ease-in;/* Toujours nommer la propriété "animation" */
 }
 @keyframes quarterspin /* Animation: faire pivoter la petite icône de confirmation */
 {
@@ -768,7 +768,7 @@ nav page1.html
     cursor: pointer;
     box-shadow: #353535 0 3px 5px;/* Accentue l'ombre portée au survol  */
 }
-/* Apparition progressive des blocs menus (animation) */
+/* Apparition progressive et successive des blocs menus (animation) */
 .delay0
 {
     animation-delay: 100ms;
@@ -813,22 +813,24 @@ nav page1.html
     max-width: 100%;
     transform: scale(0);
     animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-    animation: pouf 0.8s;
+    animation: pouf 0.7s;
 }/* animation-timing-function définit la façon dont une animation css doit se dérouler au fur et à mesure de chaque cycle */
 @keyframes pouf
 {
     from
     {
         transform: scale(0);
+        visibility: hidden;
     }
     to 
     {
         transform: scale(1);
+        visibility: visible;
     }
 }
-/* Responsive design: breakpoints - 768px - 992px - min-width pour le mobile first */
-@media screen and (min-width: 1000px) { /* min-width: tout ce qui est supérieur ou égal au nombre de pixels souhaité sera effectif */
-    /* Donc à partir des 1000 pixels des changements opéreront {...}: */
+/* Responsive design: breakpoints possibles -> 768px -> 992px - min-width pour le mobile first */
+@media screen and (min-width: 1090px) { /* min-width: tout ce qui est supérieur ou égal au nombre de pixels souhaité sera effectif */
+    /* Donc à partir des 1024 pixels des changements opéreront {...}: */
     body
     {
         width: 100%;
