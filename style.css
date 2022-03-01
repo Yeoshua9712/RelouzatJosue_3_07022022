@@ -637,14 +637,14 @@ nav page1.html
 }
 .coeurAnim .far/* Faire rétressir le coeur far pour laisser place au coeur fas */
 {
-    transform: scale(0);
+    transform: scale(1);
     -webkit-background-clip: text;
     background-clip: text;
-    transition: all 600ms ease-in-out;
+    transition: all 400ms ease-in-out;
 }
 .coeurAnim:hover .far
 {
-    transform: scale(1);
+    transform: scale(0);
     color: transparent;/* Effet de disparition du coeur fas */
     transform-origin: bottom;
 }
