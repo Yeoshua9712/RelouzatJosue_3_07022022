@@ -243,7 +243,6 @@ main
     counter-reset: étapes;
     display:flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
     margin-right: 40px;
     
