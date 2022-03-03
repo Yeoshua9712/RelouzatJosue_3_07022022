@@ -910,7 +910,7 @@ nav page1.html
     padding-top: 20px;
     margin-top: -50px;
     position: relative;
-    height: 1230px;
+    height: auto;
     margin-left: 5%;
     margin-right: 5%;
 }
