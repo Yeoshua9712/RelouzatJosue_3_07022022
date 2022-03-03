@@ -15,7 +15,7 @@ body
     height: 100%;
     z-index: 20;
     margin: auto;
-    animation: loader 3s linear;
+    animation: loader 3s linear;/* ou animation-name, c'est pareil */
     transform-origin: center;
     visibility: hidden;
 }
@@ -243,6 +243,7 @@ main
     counter-reset: étapes;
     display:flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     margin-right: 40px;
     
@@ -565,13 +566,12 @@ nav page1.html
 {
     object-fit: cover;
     width: 100%;
-    height: 250px;
+    max-height: 300px;
     position: relative;
 }
 /* Les MENUS */
 .backgroundMenu
 {
-    
     background-color:#f6f6f6;
     border-radius: 30px 30px 0 0;
     padding-top: 20px;
@@ -600,6 +600,7 @@ nav page1.html
     align-items: center;
     margin: 20px;
     flex-direction: row;
+    margin-right: 5%;/* Marge pour le coeur des pages menu  */
 }
 .margeMenu
 {
@@ -637,14 +638,14 @@ nav page1.html
 }
 .coeurAnim .far/* Faire rétressir le coeur far pour laisser place au coeur fas */
 {
-    transform: scale(1);
+    transform: scale(1);/* Inversé au lieu de scale (0) */
     -webkit-background-clip: text;
     background-clip: text;
     transition: all 400ms ease-in-out;
 }
 .coeurAnim:hover .far
 {
-    transform: scale(0);
+    transform: scale(0);/* Inversé au lieude scale (1) pour faire rétressir le premier coeur */
     color: transparent;/* Effet de disparition du coeur fas */
     transform-origin: bottom;
 }
@@ -829,7 +830,7 @@ nav page1.html
     }
 }
 /* Responsive design: breakpoints possibles -> 768px -> 992px - min-width pour le mobile first */
-@media screen and (min-width: 1090px) { /* min-width: tout ce qui est supérieur ou égal au nombre de pixels souhaité sera effectif */
+@media screen and (min-width: 1024px) { /* min-width: tout ce qui est supérieur ou égal au nombre de pixels souhaité sera effectif */
     /* Donc à partir des 1024 pixels des changements opéreront {...}: */
     body
     {
@@ -889,4 +890,28 @@ nav page1.html
         padding-top:30px;
         padding-bottom: 20px;
     }
-}   
+    .menuCell
+    {
+        display: flex;
+        white-space: nowrap;
+        flex-direction: row;
+        text-overflow: ellipsis;
+        overflow: auto;
+    }
+    .fird/* Le bloc "DESSERT" sera à la ligne au centre dès le break point */
+    {
+        width: 50%;
+        margin-left: 25%;
+    }
+    .backgroundMenu
+{
+    background-color:#f6f6f6;
+    border-radius: 30px 30px 0 0;
+    padding-top: 20px;
+    margin-top: -50px;
+    position: relative;
+    height: 1230px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+}
