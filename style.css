@@ -262,11 +262,8 @@ main
     transform: scale(1.05);
     opacity: 0.9;
     box-shadow: rgb(67, 67, 67) 0 3px 5px;
+    background-color: #ebe7f0;
     cursor: pointer;
-}
-.flexColumnTuto .fas .fa-mobile-alt .fa-list-ul .fa-store
-{
-    color: grey;
 }
 .flexColumnTuto li::before /* La partie liste énumérée + icônes */
 {
@@ -293,6 +290,11 @@ ol
 {
     position: relative;
     left: -30px;
+    color: grey;
+}
+.iconSpace:hover
+{
+    color:#9356dc;
 }
 /* Restaurants */
 .blokResto
