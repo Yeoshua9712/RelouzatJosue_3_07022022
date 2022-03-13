@@ -262,7 +262,7 @@ main
     transform: scale(1.05);
     opacity: 0.9;
     box-shadow: rgb(67, 67, 67) 0 3px 5px;
-    background-color: #ebe7f0;
+    background-color: #f0e7fa;
     cursor: pointer;
 }
 .flexColumnTuto li::before /* La partie liste énumérée + icônes */
