@@ -264,6 +264,10 @@ main
     box-shadow: rgb(67, 67, 67) 0 3px 5px;
     cursor: pointer;
 }
+.flexColumnTuto .fas .fa-mobile-alt .fa-list-ul .fa-store
+{
+    color: grey;
+}
 .flexColumnTuto li::before /* La partie liste énumérée + icônes */
 {
     content: counter(étapes);
@@ -827,7 +831,7 @@ nav page1.html
         visibility: visible;
     }
 }
-/* Responsive design: breakpoints possibles -> 768px -> 992px - min-width pour le mobile first */
+/* Responsive design: breakpoints possibles -> 768px -> 992px ou 1024px - min-width pour le mobile first */
 @media screen and (min-width: 1024px) { /* min-width: tout ce qui est supérieur ou égal au nombre de pixels souhaité sera effectif */
     /* Donc à partir des 1024 pixels des changements opéreront {...}: */
     body
